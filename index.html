@@ -282,7 +282,7 @@
     <div class="navlinks">
       <button data-scroll="s-tools" class="nav-btn active">工具地圖</button>
       <button data-scroll="s-apps" class="nav-btn">PM 工作應用</button>
-      <button data-scroll="s-case" class="nav-btn">主案例 PoC</button>
+      <button data-scroll="s-case" class="nav-btn">Agentic案例</button>
     </div>
   </div>
 </nav>
@@ -364,7 +364,7 @@
           <div class="flow-node" data-tab="t-output"><div class="fn-step">STAGE 04</div><div class="fn-title">產出</div><div class="fn-sub">持續追蹤 Dashboard</div></div>
         </div>
 
-        <div class="tabs" id="caseTabs">
+        <div class="tabs" id="caseTabs" style="scroll-margin-top: 80px;">
           <button class="tab-btn active" data-tab="t-collect"><span class="tn">01</span> 蒐集層</button>
           <button class="tab-btn" data-tab="t-filter"><span class="tn">02</span> 過濾層</button>
           <button class="tab-btn" data-tab="t-score"><span class="tn">03</span> 評分層</button>
@@ -553,7 +553,7 @@ const tabPanels = document.querySelectorAll('.tab-panel');
 function activateTab(id){
   tabBtns.forEach(b=>b.classList.toggle('active', b.dataset.tab===id));
   tabPanels.forEach(p=>p.classList.toggle('active', p.id===id));
-  document.getElementById('s-case').scrollIntoView({behavior:'smooth', block:'start'});
+  document.getElementById('caseTabs').scrollIntoView({behavior:'smooth', block:'start'});
 }
 tabBtns.forEach(b=> b.addEventListener('click', ()=>activateTab(b.dataset.tab)));
 document.querySelectorAll('#flowOverview .flow-node').forEach(n=>{
